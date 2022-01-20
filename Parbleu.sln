@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parbleu", "src\Parbleu\Parbleu.csproj", "{C982ACE2-49AB-4D9A-8F80-8E2CD98D8FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parbleu.Test", "tests\Parbleu.Test\Parbleu.Test.csproj", "{40BFE9B5-2881-431A-BA81-F230A4B61527}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C982ACE2-49AB-4D9A-8F80-8E2CD98D8FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C982ACE2-49AB-4D9A-8F80-8E2CD98D8FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C982ACE2-49AB-4D9A-8F80-8E2CD98D8FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C982ACE2-49AB-4D9A-8F80-8E2CD98D8FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40BFE9B5-2881-431A-BA81-F230A4B61527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40BFE9B5-2881-431A-BA81-F230A4B61527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40BFE9B5-2881-431A-BA81-F230A4B61527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40BFE9B5-2881-431A-BA81-F230A4B61527}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+        <PackageReference Include="NUnit" Version="3.13.2" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+        <PackageReference Include="coverlet.collector" Version="3.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="SampleData\big-ass-mall.book" />
+      <EmbeddedResource Include="SampleData\big-ass-mall.book" />
+      <None Remove="SampleData\fcpu-conditions.book" />
+      <None Remove="SampleData\tileable-science.book" />
+      <EmbeddedResource Include="SampleData\tileable-science.book" />
+      <None Remove="SampleData\chunk-aligned-railway.book" />
+      <EmbeddedResource Include="SampleData\chunk-aligned-railway.book" />
+      <None Remove="SampleData\fcpu-conditions.blueprint" />
+      <EmbeddedResource Include="SampleData\fcpu-conditions.blueprint" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Parbleu\Parbleu.csproj" />
+    </ItemGroup>
+
+</Project>
