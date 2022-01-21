@@ -29,14 +29,14 @@ public class TestSerialization
     [Test(), TestCaseSource(nameof(AllSampleData))]
     public void Deflate(KeyValuePair<string, string> book)
     {
-        var json = BlueprintSerializer.DecompressBlueprintString(book.Value);
+        var json = BlueprintSerializer.BlueprintStringToJson(book.Value);
         Assert.NotNull(json);
     }
     
     [Test(), TestCaseSource(nameof(AllSampleData))]
     public void IsValidJson(KeyValuePair<string, string> book)
     {
-        var json = BlueprintSerializer.DecompressBlueprintString(book.Value);
+        var json = BlueprintSerializer.BlueprintStringToJson(book.Value);
         var deserialized = JsonSerializer.Deserialize<JsonObject>(json);
     }
     
@@ -54,7 +54,7 @@ public class TestSerialization
     [Test(), TestCaseSource(nameof(AllSampleData))]
     public void TestRoundtripJson(KeyValuePair<string, string> book)
     {
-        var json = BlueprintSerializer.DecompressBlueprintString(book.Value);
+        var json = BlueprintSerializer.BlueprintStringToJson(book.Value);
         var deserialized = BlueprintSerializer.BlueprintStringToObject(book.Value);
         var jsonSerialized = BlueprintSerializer.ToJson(deserialized);
         Assert.AreEqual(json, jsonSerialized);

@@ -38,7 +38,7 @@ public static class BlueprintSerializer
     /// </summary>
     /// <param name="encoded"></param>
     /// <returns>json</returns>
-    public static string DecompressBlueprintString(string encoded)
+    public static string BlueprintStringToJson(string encoded)
     {
         var bytes = Base64DecodeBlueprintString(encoded).Skip(2).ToArray(); // Skip compression level (since it is explicitly specified as 9)
         using (var ms = new MemoryStream(bytes))
@@ -53,14 +53,14 @@ public static class BlueprintSerializer
 
     public static Book BlueprintStringToBook(string encoded)
     {
-        var json = DecompressBlueprintString(encoded);
+        var json = BlueprintStringToJson(encoded);
         var wrapper = JsonSerializer.Deserialize<BookWrapper>(json);
         return wrapper?.blueprint_book;
     }
     
     public static Blueprint BlueprintStringToBlueprint(string encoded)
     {
-        var json = DecompressBlueprintString(encoded);
+        var json = BlueprintStringToJson(encoded);
         var wrapper = JsonSerializer.Deserialize<BlueprintWrapper>(json);
         return wrapper?.blueprint;
     }
